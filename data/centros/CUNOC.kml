@@ -469,5 +469,28 @@
 			</outerBoundaryIs>
 		</Polygon>
 	</Placemark>
+	<Placemark id="07E416FD951B6FEA4408">
+		<name>Estacionamiento módulo 90</name>
+		<LookAt>
+			<longitude>-91.5353755133693</longitude>
+			<latitude>14.84517883910472</latitude>
+			<altitude>2385.74955479409</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>607.64327493358</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_001C371B0A1B6C48FCAA</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-91.53568335657869,14.84611600290721,2387.911869822648 -91.53575418233021,14.84568512152839,2387.818163840936 -91.5353081065024,14.84563150738915,2386.309394704279 -91.53524788917935,14.84604581215576,2386.760891543047 -91.53568335657869,14.84611600290721,2387.911869822648 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
 </Document>
 </kml>
