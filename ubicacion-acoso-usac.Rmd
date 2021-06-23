@@ -136,7 +136,7 @@ Esto se refiere al centro universitario en donde ocurrió el acoso, que puede no
 
 
 
-```{r, fig.width=8.5, fig.height=7}
+```{r, fig.width=8.5, fig.height=6.5, fig.cap='Ubicación de centros universitarios y campus central'}
 centers %>%
   group_by(departamento) %>%
   summarize(
@@ -157,7 +157,6 @@ centers %>%
     color = "blue"
   ) +
   labs(
-    title = "Ubicación de centros universitarios y campus central",
     x = NULL,
     y = NULL
   )
@@ -171,7 +170,7 @@ Esto permite asignar con mucha facilidad los casos reportados a un área relativ
 \vspace{2em}
 
 
-```{r, fig.width=8.5, fig.height=7}
+```{r, fig.width=8.5, fig.height=6.5, fig.cap='Mapa de la zonificación del campus central de USAC'}
 usac_zones %>%
   mutate(
     zona = zona %>%
@@ -195,7 +194,6 @@ usac_zones %>%
     color = "blue"
   ) +
   labs(
-    title = "Zonificación del campus central",
     x = NULL,
     y = NULL
   )
@@ -259,7 +257,7 @@ Y por último, se incluiría un campo abierto para que quien reporta pueda inclu
 \blandscape
 
 
-```{r, fig.width=8.5, fig.height=6.5}
+```{r, fig.width=8.5, fig.height=6.5, fig.cap='Detalle de edificios y lugares en el campus central de USAC. Referencia de IDs de edificios en tabla en siguiente página.'}
 buildings %>%
   ggplot() +
   geom_sf( 
@@ -276,14 +274,15 @@ buildings %>%
     color = "red"
   ) +
   labs(
-    title = "Zonificación del campus central",
-    subtitle = "Referencia de IDs de edificios en tabla en siguiente página.",
     x = NULL, 
     y = NULL
   )
 ```
 
 
+\elandscape
+
+\blandscape
 
 
 ```{r results='asis', include=FALSE}
