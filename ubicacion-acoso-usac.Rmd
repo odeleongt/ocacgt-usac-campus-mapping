@@ -4,6 +4,8 @@ output: pdf_document
 header-includes:
   - \usepackage{caption}
   - \captionsetup[table]{labelformat=empty}
+  - \renewcommand{\figurename}{Figura}
+  - \renewcommand{\tablename}{Tabla}
   - \usepackage{pdflscape}
   - \newcommand{\blandscape}{\begin{landscape}}
   - \newcommand{\elandscape}{\end{landscape}}
