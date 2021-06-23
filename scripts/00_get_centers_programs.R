@@ -117,22 +117,24 @@ carreras_usac <- content %>%
 write_csv(carreras_usac, "data/carreras_usac.csv")
 
 
+centros <- carreras_usac %>%
+  mutate(
+    centro = factor(centro, levels = unique(centro))
+  ) %>%
+  count(centro, nombre_corto, departamento) %>%
+  mutate(
+    lugar = NA_character_,
+    long = NA_real_,
+    lat = NA_real_
+  ) %>%
+  select(-n) %>%
+  print()
+
 
 
 # avoid overwriting
 if(!file.exists("data/centros_usac.csv")){
-  carreras_usac %>%
-    mutate(
-      centro = factor(centro, levels = unique(centro))
-    ) %>%
-    count(centro, nombre_corto, departamento) %>%
-    mutate(
-      lugar = NA_character_,
-      long = NA_real_,
-      lat = NA_real_
-    ) %>%
-    select(-n) %>%
-    print() %>%
+  centros %>%
     write_csv("data/centros_usac.csv", na = "")
 }
 
