@@ -1,0 +1,5 @@
+# RStudio ignores
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
