@@ -29,7 +29,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 
 ```{r data, include=FALSE}
-departments <- read_rds("../dashboard/data/departments.rds")
+departments <- read_rds("data/departments.rds")
 
 # all USAC centers
 centers <- read_csv("data/centros_usac.csv") %>%
@@ -42,7 +42,7 @@ centers <- read_csv("data/centros_usac.csv") %>%
 
 # USAC main campus limits
 # Read in raw shapes
-buildings_usac <- sf::read_sf("../dashboard/data/usac.osm", layer = "multipolygons") %>%
+buildings_usac <- sf::read_sf("data/usac.osm", layer = "multipolygons") %>%
   print()
 
 # Define university limits
@@ -52,7 +52,7 @@ limits <- buildings_usac %>%
 
 
 # Zonification by Ligia Ruiz
-usac_zones <- sf::read_sf("../dashboard/data/usac/zonas/zonas_usac.shp") %>%
+usac_zones <- sf::read_sf("data/usac/zonas/zonas_usac.shp") %>%
   sf::st_transform(crs = 4326) %>%
   transmute(
     id = 1:n(),
